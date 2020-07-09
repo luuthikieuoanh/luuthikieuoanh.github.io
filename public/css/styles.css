@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item .list {
+    list-style: none;
+    /*mất dấu chấm trước list*/
+    text-decoration: none;
+    /*mất dấu gạch chân dưới từ liên kết*/
+    position: absolute;
+    /*cho phần menu nổi lên*/
+    top: 80px;
+}
+
+.list a {
+    padding: 15px 40px 15px 25px;
+    float: left;
+    line-height: 1.5em;
+    position: relative;
+    width: 200px;
+    text-align: left;
+    background: #252525;
+}
+
+.list .homepage a {
+    color: #fcda9a;
+}
