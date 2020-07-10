@@ -1,3 +1,14 @@
+header.top-header {
+    background-image: url(../images/slide1.jpg);
+    background-size: cover;
+    /* height: 759px;
+    width: 1349.33px; */
+    /* width: 100%;
+    height: 100%; */
+    /* position: fixed; */
+    /* position: relative; */
+}
+
 .dropdown:hover>.dropdown-menu {
     display: block;
 }
@@ -6,96 +17,76 @@
     pointer-events: none;
 }
 
+.navbar-nav>li {
+    padding-bottom: 0;
+}
+
 .dropdown-menu {
-    padding: 0 0;
+    padding: 0;
+    margin: 0;
+    min-width: 250px;
     border-radius: 0;
-    background: yellowgreen;
+    background: #2c2c2c;
+}
+
+.dropdown-item {
+    padding: 15px;
+}
+
+.border-text {
+    border-bottom: 1px solid #3c3c3c;
 }
 
 .dropdown-menu a:hover {
-    background: red;
+    background: #333;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #848484;
 }
 
 .navbar-light .navbar-nav .home {
     color: #fcda9a;
 }
 
-.circle {
-    color: black;
-    /* color: transparent; */
+.navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
+    color: #848484;
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
-    /* color: #fcda9a; */
-    color: red;
+    color: #fcda9a;
 }
 
 .navbar-light .navbar-nav .nav-link:hover .circle {
-    color: red;
+    color: #fcda9a;
 }
 
 .dropdown-submenu {
-    left: 165px;
-    top: -3px;
+    left: 249px;
+    top: -1px;
 }
 
 .fa-circle {
     font-size: 6px;
-    position: absolute;
-    top: 17px;
-    left: -3px;
-}
-
-
-/* .dropdown-ex {
-    padding: 0 0;
-} */
-
-
-/* .dropdown-example .dropdown-menu {
-    display: block;
-    left: 150px;
-    display: none;
-    /* float: left;
-}*/
-
-
-/* .dropdown-example :hover */
-
-
-/* .a {
-    list-style: none;
-} */
-
-
-/* .dropdown-submenu {
-    display: block;
-} */
-
-
-/* .nav-item .list {
-    list-style: none;
-    /*mất dấu chấm trước list
-    text-decoration: none;
-    /*mất dấu gạch chân dưới từ liên kết
-    position: absolute;
-    /*cho phần menu nổi lên
-    top: 80px;
-} */
-
-
-/* 
-.list a {
-    padding: 15px 40px 15px 25px;
-    float: left;
-    line-height: 1.5em;
     position: relative;
-    width: 200px;
-    text-align: left;
-    background: #252525;
+    top: -3px;
 }
 
-.list .homepage a {
-    color: #fcda9a;
-} 
-*/
+.circle {
+    color: transparent;
+}
+
+.navbar-light .navbar-nav .nav-item .dropdown-ex {
+    color: #848484;
+    padding: 15px;
+}
+
+#dropdown-ex {
+    min-width: 220px;
+}
+
+.fa-caret-right {
+    position: relative;
+    left: 70px;
+    top: 1.5px;
+}
