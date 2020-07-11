@@ -1,28 +1,92 @@
-* {
-    margin: 0;
+header.top-header {
+    background-image: url(../images/slide1.jpg);
+    background-size: cover;
+    /* height: 759px;
+    width: 1349.33px; */
+    /* width: 100%;
+    height: 100%; */
+    /* position: fixed; */
+    /* position: relative; */
+}
+
+.dropdown:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown>.dropdown-toggle:active {
+    pointer-events: none;
+}
+
+.navbar-nav>li {
+    padding-bottom: 0;
+}
+
+.dropdown-menu {
     padding: 0;
+    margin: 0;
+    min-width: 250px;
+    border-radius: 0;
+    background: #2c2c2c;
 }
 
-.nav-item .list {
-    list-style: none;
-    /*mất dấu chấm trước list*/
-    text-decoration: none;
-    /*mất dấu gạch chân dưới từ liên kết*/
-    position: absolute;
-    /*cho phần menu nổi lên*/
-    top: 80px;
+.dropdown-item {
+    padding: 15px;
 }
 
-.list a {
-    padding: 15px 40px 15px 25px;
-    float: left;
-    line-height: 1.5em;
-    position: relative;
-    width: 200px;
-    text-align: left;
-    background: #252525;
+.border-text {
+    border-bottom: 1px solid #3c3c3c;
 }
 
-.list .homepage a {
+.dropdown-menu a:hover {
+    background: #333;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #848484;
+}
+
+.navbar-light .navbar-nav .home {
     color: #fcda9a;
+}
+
+.navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
+    color: #848484;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #fcda9a;
+}
+
+.navbar-light .navbar-nav .nav-link:hover .circle {
+    color: #fcda9a;
+}
+
+.dropdown-submenu {
+    left: 249px;
+    top: -1px;
+}
+
+.fa-circle {
+    font-size: 6px;
+    position: relative;
+    top: -3px;
+}
+
+.circle {
+    color: transparent;
+}
+
+.navbar-light .navbar-nav .nav-item .dropdown-ex {
+    color: #848484;
+    padding: 15px;
+}
+
+#dropdown-ex {
+    min-width: 220px;
+}
+
+.fa-caret-right {
+    position: relative;
+    left: 70px;
+    top: 1.5px;
 }
