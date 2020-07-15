@@ -1,25 +1,73 @@
-header.top-header {
-    background-image: url(../images/slide1.jpg);
-    background-size: cover;
-    /* height: 759px;
-    width: 1349.33px; */
-    /* width: 100%;
-    height: 100%; */
-    /* position: fixed; */
-    /* position: relative; */
+body {
+    position: relative;
 }
+
+
+/* header .header-inner {
+    padding: 0 150px;
+} */
+
+
+/* position: absolute; */
+
+
+/* top: 0;
+    width: 100%; */
+
+
+/* background-color: rgba(0, 0, 0, 0.8); */
+
+
+/* } */
+
+header .fixed {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.setcontainer {
+    padding: 0 30px;
+}
+
+.setlogo {
+    max-width: 100px;
+}
+
+.navbar-nav {
+    padding-top: 7px
+}
+
+
+/* .row {
+    margin-left: -15px;
+    margin-right: -15px;
+} */
+
+.navbar-light .navbar-toggler {
+    background: #252525;
+    color: #dedede;
+    padding-right: 100px;
+}
+
+
+/* Cho ptu xuong dong */
 
 .dropdown:hover>.dropdown-menu {
     display: block;
 }
 
+
+/* su kien con tro */
+
 .dropdown>.dropdown-toggle:active {
     pointer-events: none;
 }
 
-.navbar-nav>li {
-    padding-bottom: 0;
-}
+
+/* Chỉnh sửa khung menu */
 
 .dropdown-menu {
     padding: 0;
@@ -29,6 +77,9 @@ header.top-header {
     background: #2c2c2c;
 }
 
+
+/* căn lề */
+
 .dropdown-item {
     padding: 15px;
 }
@@ -37,12 +88,35 @@ header.top-header {
     border-bottom: 1px solid #3c3c3c;
 }
 
-.dropdown-menu a:hover {
+
+/* hover menu-item */
+
+.navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover {
+    color: #fcda9a;
     background: #333;
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: #848484;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 15px;
+    color: white;
+}
+
+
+/* Chinh menu trong mobile */
+
+
+/* @media (min-width: 768px) {
+    .navbar-nav>li>a {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+} */
+
+.navbar-nav>li>.nav-link {
+    position: relative;
+    /* display: block; */
+    margin-bottom: 10px;
 }
 
 .navbar-light .navbar-nav .home {
@@ -69,7 +143,9 @@ header.top-header {
 .fa-circle {
     font-size: 6px;
     position: relative;
+    display: inline;
     top: -3px;
+    left: -4px;
 }
 
 .circle {
@@ -78,15 +154,76 @@ header.top-header {
 
 .navbar-light .navbar-nav .nav-item .dropdown-ex {
     color: #848484;
-    padding: 15px;
 }
 
 #dropdown-ex {
-    min-width: 220px;
+    min-width: 250px;
 }
 
 .fa-caret-right {
     position: relative;
     left: 70px;
     top: 1.5px;
+}
+
+.slide-bg {
+    background-image: url(../images/slide1.jpg);
+    height: 1000px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.slide-bg .ms-layer1 {
+    top: 500px;
+    color: #fcda9a;
+    font-size: 38px;
+    font-family: 'Montez', cursive;
+}
+
+.slide-bg .ms-layer2 {
+    color: #fff;
+    font-family: 'Suranna', serif;
+    text-transform: uppercase;
+    font-size: 50px;
+}
+
+.slide-bg h2,
+h3 {
+    text-align: center;
+}
+
+.img-slide1-1 {
+    width: 400px;
+    height: 600px;
+    top: 50px;
+    float: left;
+    position: fixed;
+}
+
+.img-slide1-2 {
+    width: 100px;
+    height: 100px;
+    top: 150px;
+    left: 150px;
+    /* float: right; */
+    position: fixed;
+}
+
+.img-slide1-3 {
+    width: 100px;
+    height: 100px;
+    top: 300px;
+    left: 150px;
+    /* float: left; */
+    position: fixed;
+}
+
+.img-slide1-4 {
+    width: 100px;
+    height: 100px;
+    top: 400px;
+    left: 150px;
+    /* float: left; */
+    position: fixed;
 }
