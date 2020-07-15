@@ -2,24 +2,6 @@ body {
     position: relative;
 }
 
-
-/* header .header-inner {
-    padding: 0 150px;
-} */
-
-
-/* position: absolute; */
-
-
-/* top: 0;
-    width: 100%; */
-
-
-/* background-color: rgba(0, 0, 0, 0.8); */
-
-
-/* } */
-
 header .fixed {
     width: 100%;
     position: fixed;
@@ -39,12 +21,6 @@ header .fixed {
 .navbar-nav {
     padding-top: 7px
 }
-
-
-/* .row {
-    margin-left: -15px;
-    margin-right: -15px;
-} */
 
 .navbar-light .navbar-toggler {
     background: #252525;
@@ -146,6 +122,7 @@ header .fixed {
     display: inline;
     top: -3px;
     left: -4px;
+    transition: all .5s; 
 }
 
 .circle {
@@ -196,15 +173,16 @@ h3 {
 .img-slide1-1 {
     width: 400px;
     height: 600px;
-    top: 50px;
+    top: 100px;
     float: left;
     position: fixed;
+    z-index: 1;
 }
 
 .img-slide1-2 {
     width: 100px;
     height: 100px;
-    top: 150px;
+    top: 170px;
     left: 150px;
     /* float: right; */
     position: fixed;
