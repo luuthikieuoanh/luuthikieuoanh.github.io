@@ -10,6 +10,7 @@ a.addEventListener("click", function() {
 const navBar = document.querySelector('.navbar');
 const logo = document.querySelector('a.logo');
 const c = document.querySelector('.header-inner');
+const d = document.querySelector('.ms-slide-layer');
 //
 window.addEventListener('scroll', () => {
     // console.log(window.pageYOffset)
@@ -24,37 +25,102 @@ window.addEventListener('scroll', () => {
         c.style.backgroundColor = 'transparent';
         c.style.paddingTop = `${20}px`;
     }
+    //Chỉnh kéo theo và làm mờ nền
+    d.style.top = `${-(window.scrollY *0.30)}px`;
+    d.style.opacity = `${1 - window.scrollY*0.001}`;
 });
 
-//Thay đổi độ dài của ảnh với các screen khác nhau
-const ax = document.querySelector('.masterslider');
+function name(params) {
+    //Thay đổi độ dài của ảnh với các screen khác nhau
+    // const ax = document.querySelector('.masterslider');
 
-function changeScreen() {
-    ax.style.width = `${screen.width}px`
-        // ax.style.height = `${screen.height}px`
+    // function changeScreen() {
+    //     ax.style.width = `${screen.width}px`
+    //         // ax.style.height = `${screen.height}px`
+    // }
+    // setInterval(changeScreen, 100);
+
+    //Bắt sự kiện di chuyển chuột mousemove
+    // function myFunction(e) {
+    //     let x = e.clientX;
+    //     let y = e.clientY;
+    //     let rs = x + "," + y;
+    //     console.log(rs);
+    // }
+
+    // let mm = document.querySelector(".ms-parallax-layer");
+
+    // mm.addEventListener('mousemove', (e) => {
+    //     mm.style.backgroundPositionX = e.pageX + "px";
+    //     mm.style.backgroundPositionY = e.pageY + "px";
+    // })
+
+    // let oanh = document.querySelectorAll('.move');
+
+    // oanh.forEach(move => {
+    //     let valueX = move.style.top;
+    //     alert(document.querySelector('.move').style.top)
+    //     let valueY = move.style.left;
+    //     console.log(valueX + "," + valueY);
+    //     $(document).ready(function() {
+    //         $(document).mousemove(function(event) {
+    //             $(move).css({ 'top': event.pageX, 'left': event.pageY })
+    //         });
+    //     });
+    // });
+
+    // let valueX = document.querySelector('.move1').style.top;
+    // alert(document.querySelector('.move').style.top)
+    // let valueY = document.querySelector('.move').style.left;
 }
-setInterval(changeScreen, 100);
-
-//Bắt sự kiện di chuyển chuột mousemove
-// function myFunction(e) {
-//     let x = e.clientX;
-//     let y = e.clientY;
-//     let rs = x + "," + y;
-//     console.log(rs);
-
-// }
-
-// let mm = document.querySelector("#img-slide1-1");
-
-// mm.addEventListener('mousemove', (e) => {
-//     mm.style.backgroundPositionX = e.pageX + "px";
-//     mm.style.backgroundPositionY = e.pageY + "px";
-
-// })
-
-
+//Chỉnh chuyển động củ hành
 $(document).ready(function() {
     $(document).mousemove(function(event) {
-        $('.move').css({ 'top': event.pageX, 'left': event.pageY })
+        $('.move1').css({
+            'top': 170 + event.pageY * 0.08,
+            'left': 215 + event.pageX * 0.05
+        })
+    });
+});
+//Chỉnh chuyển động tô hành
+$(document).ready(function() {
+    $(document).mousemove(function(event) {
+        $('.move2').css({ 'top': 440 + event.pageY * 0.04, 'left': 200 + event.pageX * 0.05 })
+    });
+});
+//Chỉnh chuyển động cây nấm
+$(document).ready(function() {
+    $(document).mousemove(function(event) {
+        $('.move3').css({ 'top': 578 + event.pageY * 0.03, 'left': 213 + event.pageX * 0.04 })
+    });
+});
+//Chỉnh chuyển động đầu nấm
+$(document).ready(function() {
+    $(document).mousemove(function(event) {
+        $('.move4').css({ 'top': 660 + event.pageY * (-0.03), 'left': 200 + event.pageX * 0.05 })
+    });
+});
+//Chỉnh chuyển động của nấm đôi trên
+$(document).ready(function() {
+    $(document).mousemove(function(event) {
+        $('.move5').css({ 'top': 120 + event.pageY * 0.02, 'left': 1080 + event.pageX * 0.03 })
+    });
+});
+//Chỉnh chuyển động của nấm đôi dưới
+$(document).ready(function() {
+    $(document).mousemove(function(event) {
+        $('.move6').css({ 'top': 370 + event.pageY * 0.02, 'left': 1090 + event.pageX * 0.009 })
+    });
+});
+//Chỉnh chuyển động của lá
+$(document).ready(function() {
+    $(document).mousemove(function(event) {
+        $('.move7').css({ 'top': 95 + event.pageY * 0.02, 'left': 1000 + event.pageX * 0.05 })
+    });
+});
+//Chỉnh chuyển động của cây nấm
+$(document).ready(function() {
+    $(document).mousemove(function(event) {
+        $('.move8').css({ 'top': 340 + event.pageY * 0.02, 'left': 920 + event.pageX * 0.05 })
     });
 });
