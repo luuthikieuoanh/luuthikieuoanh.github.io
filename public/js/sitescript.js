@@ -24,22 +24,37 @@ window.addEventListener('scroll', () => {
         c.style.backgroundColor = 'transparent';
         c.style.paddingTop = `${20}px`;
     }
-})
+});
 
 //Thay đổi độ dài của ảnh với các screen khác nhau
-const ax = document.querySelector('.slide-img-bg');
+const ax = document.querySelector('.masterslider');
 
 function changeScreen() {
     ax.style.width = `${screen.width}px`
-    ax.style.height = `${screen.height}px`
+        // ax.style.height = `${screen.height}px`
 }
 setInterval(changeScreen, 100);
 
 //Bắt sự kiện di chuyển chuột mousemove
-function myFunction(e) {
-    let x = e.clientX;
-    let y = e.clientY;
-    let rs = x + "," + y;
-    console.log(rs);
+// function myFunction(e) {
+//     let x = e.clientX;
+//     let y = e.clientY;
+//     let rs = x + "," + y;
+//     console.log(rs);
 
-}
+// }
+
+// let mm = document.querySelector("#img-slide1-1");
+
+// mm.addEventListener('mousemove', (e) => {
+//     mm.style.backgroundPositionX = e.pageX + "px";
+//     mm.style.backgroundPositionY = e.pageY + "px";
+
+// })
+
+
+$(document).ready(function() {
+    $(document).mousemove(function(event) {
+        $('.move').css({ 'top': event.pageX, 'left': event.pageY })
+    });
+});
