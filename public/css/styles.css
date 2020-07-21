@@ -1,8 +1,8 @@
 /* Cố định thanh nav trên bg ngoài header */
-img{
+
+img {
     width: 100%;
 }
-
 
 #header-wrapper {
     width: 100%;
@@ -191,6 +191,7 @@ header .fixed {
     padding: 0px;
     font-size: 50px;
     font-family: "Montez", cursive;
+    animation: chuChayLen 2.5s forwards;
 }
 
 .text2 {
@@ -381,6 +382,10 @@ header .fixed {
     /* z-index: 1; */
 }
 
+.move9 {
+    animation: chuChayLen 1.5s forwards;
+}
+
 
 /* Set page content */
 
@@ -400,7 +405,7 @@ header .fixed {
 
 /* Bg ngoài */
 
-.bg-im1 {
+.bg-img1 {
     background-image: url(../images/bkg-2.jpg);
 }
 
@@ -418,7 +423,7 @@ header .fixed {
 .frame-box {
     background-color: #fff;
     border: 17px solid #131822;
-    padding: 80px 50px;
+    padding: 100px 50px;
     background-size: 100%;
     background-position: center;
 }
@@ -428,6 +433,10 @@ header .fixed {
 
 .centered {
     text-align: center;
+}
+
+.frame-box .custom-heading p {
+    margin-top: 50px;
 }
 
 .custom-heading h3 {
@@ -445,30 +454,34 @@ header .fixed {
     text-transform: none;
 }
 
-.hr-simple span {
+.hr-simple {
+    position: absolute;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.hr-simple-left {
     position: absolute;
     background-color: #b48c80;
     width: 30px;
     height: 1px;
-    margin-top: 10px;
-}
-
-.hr-simple-left {
-    left: 229px;
+    left: 20px;
+    top: 15px;
 }
 
 .hr-simple-right {
-    right: 238px;
+    position: absolute;
+    background-color: #b48c80;
+    width: 30px;
+    height: 1px;
+    right: 20px;
+    top: 15px;
 }
 
 .hr-simple .icon {
-    right: 0;
-    top: -6px;
+    left: .5px;
+    top: .1px;
     color: #b48c80;
-}
-
-.hr-simple {
-    margin-bottom: 20px;
 }
 
 .custom-heading p {
@@ -504,6 +517,8 @@ header .fixed {
 .divider-after {
     position: absolute;
     font-size: 15px;
+    margin: 0 auto;
+    display: inline-block;
 }
 
 .divider-after .hr-double-after.left::before {
@@ -552,21 +567,36 @@ header .fixed {
 }
 
 #custom-heading {
-    animation: chuChay 2s forwards;
+    animation: chuChayLen 2s forwards;
 }
 
 
 /* Tạo hướng animation cho chữ */
 
-@keyframes chuChay {
+@keyframes chuChayLen {
     from {
         opacity: 0;
         margin-top: 60px;
     }
     to {
         opacity: 1;
-        margin-top: 20px;
+        margin-top: 10px;
     }
+}
+
+@keyframes chuChayXuong {
+    from {
+        opacity: 0;
+        margin-top: 0px;
+    }
+    to {
+        opacity: 1;
+        margin-top: 15px;
+    }
+}
+
+.down-motion {
+    animation: chuChayXuong 2s forwards;
 }
 
 
@@ -576,7 +606,7 @@ header .fixed {
 /* Chưa xong còn sửa hover */
 
 .bg-img3 {
-    background-image: url(../images/bkg-2.jpg);
+    background-color: #fff;
     width: 100%;
     height: auto;
     padding-top: 100px;
@@ -639,6 +669,79 @@ header .fixed {
 }
 
 
+/* hover image */
+
+#col-md-6 {
+    padding: 0;
+}
+
+.hover-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* transition: all 0.2s ease 0s; */
+    /* -webkit-transition: all 0.2s ease 0s; */
+}
+
+#col-md-6:hover .hover-mask {
+    opacity: 1;
+    transition: all 0.2s;
+}
+
+#col-md-6:hover .hover-mask .horizontal,
+#col-md-6:hover .hover-mask .vertical {
+    animation: hoverUp 0.4s forwards;
+}
+
+.transition-img {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    margin-bottom: -25px;
+    margin-left: -25px;
+}
+
+.transition-img:hover {
+    transform: rotate(45deg);
+}
+
+.transition-img:hover .horizontal,
+.transition-img:hover .vertical {
+    background-color: #fcda9a;
+}
+
+.horizontal {
+    position: absolute;
+    top: 49.5%;
+    width: 100%;
+    height: 1.5px;
+    background-color: #fff;
+}
+
+.vertical {
+    position: absolute;
+    left: 49.5%;
+    width: 1.5px;
+    height: 100%;
+    background-color: #fff;
+}
+
+@keyframes hoverUp {
+    from {
+        margin-top: 10px;
+    }
+    to {
+        margin-top: 0px;
+    }
+}
+
+
 /* Bg-page-fourth */
 
 .bg-img4 {
@@ -655,17 +758,36 @@ header .fixed {
     padding-top: 260px;
 }
 
-.test{
-    padding: 0;
+
+/* page-seven */
+
+
+/* Form table */
+
+.table-text {
+    text-align: center;
 }
-.test1{
-    background-color: rgba(0, 0, 0, .6);
-    position: absolute;
-    top: 0;
-    opacity: 0;
+
+.table-text h3 {
+    font-size: 35px;
+}
+
+#hr-simple {
+    margin-top: -10px;
+}
+
+
+/* .name {
+    padding: 3px 20px;
+}
+
+input[type=text] {
     width: 100%;
-    height: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
 }
-.test:hover .test1{
-    opacity: 1;
-}
+
+.name input {
+    border: transparent;
+} */
