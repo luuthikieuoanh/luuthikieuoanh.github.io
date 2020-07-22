@@ -709,6 +709,7 @@ header .fixed {
 
 .transition-img:hover {
     transform: rotate(45deg);
+    transition: all 0.2s;
 }
 
 .transition-img:hover .horizontal,
@@ -782,11 +783,12 @@ header .fixed {
 
 input[type="text"] {
     width: 100%;
-    padding: 8px 20px;
+    padding: 8px 40px;
     margin: 8px 0;
     border-radius: 0;
     color: #777;
     border: 1px solid #CCC;
+    outline: none;
 }
 
 .icon1 {
@@ -797,6 +799,16 @@ input[type="text"] {
     position: absolute;
 }
 
-.fa-envelopex {
-    margin-top: 30px;
+.fa-envelope {
+    margin-top: 23px;
+}
+
+select {
+    width: 100%;
+    padding: 8px 35px;
+    margin: 8px 0;
+    border-radius: 0;
+    color: #777;
+    border: 1px solid #CCC;
+    outline: none;
 }

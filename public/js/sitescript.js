@@ -2,9 +2,9 @@
 const a = document.querySelector('.navbar-toggler');
 const b = document.querySelector('#collapsibleNavId');
 //
-a.addEventListener("click", function() {
-    b.classList.toggle('show');
-});
+// a.addEventListener("click", function() {
+//     b.classList.toggle('show');
+// });
 
 //Bắt sự kiện lăn chuột
 const navBar = document.querySelector('.navbar');
@@ -124,3 +124,26 @@ $(document).ready(function() {
         $('.move8').css({ 'top': 340 + event.pageY * 0.02, 'left': 920 + event.pageX * 0.05 })
     });
 });
+
+let strDate = document.form.date;
+//Kiểm tra ngày nhập vào 
+function checkDate(strDate) {
+    var comp = strDate.value.split('/')
+    var d = parseInt(comp[0], 10) //parseint(phần tử trước dấu /, 10(là số thập phân))
+    var m = parseInt(comp[1], 10)
+    var y = parseInt(comp[2], 10)
+    var date = new Date(y, m - 1, d);
+    if (date.getFullYear() == y && date.getMonth() + 1 == m && date.getDate() == d) {
+        return true
+    }
+    return false
+}
+
+//Bắt sự kiện phím enter để kiểm tra ngày nhập vào đúng hay sai
+function keydownHandler(event) {
+    if (event.keyCode == 13) {
+        if (checkDate(strDate) === false) {
+            alert('Please verify entered data and try again!');
+        }
+    }
+}

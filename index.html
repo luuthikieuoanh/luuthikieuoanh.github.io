@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subject projects - FrontEnd_1 - Royal plate</title>
     <link rel="stylesheet" href="./public/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="./public/css/bootstrap.min.css">
     <link rel="stylesheet" href="./public/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
@@ -418,15 +419,44 @@
                     </div>
                     <!-- Form table -->
                     <div class="table" style="padding-top: 50px;">
-                        <form>
+                        <form name="form">
                             <div id="table">
-                                <div class="name-wrap" style="position: relative;">
+                                <!-- Form nhập tên -->
+                                <div class="name-wrap">
                                     <i class="fas fa-user icon1"></i>
-                                    <input name="Name" type="text" placeholder="     Your name">
+                                    <input name="name" type="text" placeholder="Your name">
                                 </div>
-                                <div class="mail-wrap" style="position: relative;">
-                                    <i class="far fa-envelopex icon1" style="display: inline-block;"></i>
-                                    <input name="Name" type="text" placeholder="     Your email">
+                                <!-- Form nhập mail -->
+                                <div class="mail-wrap">
+                                    <i class="far fa-envelope icon1"></i>
+                                    <input name="mail" type="text" placeholder="Your email">
+                                </div>
+                                <div class="date-wrap">
+                                    <i class="far fa-calendar-alt icon1"></i>
+                                    <input name="date" type="text" value="17/09/2016" onkeydown="keydownHandler(event)">
+                                </div>
+                                <div class="time-wrap">
+                                    <i class="far fa-clock icon1"></i>
+                                    <!-- <input name="time" type="text" placeholder="10:30 pm"> -->
+                                    <select id="time" name="time">
+                                        <option value="10:30 pm">10:30pm</option>
+                                        <option value="6:00 pm">6:00 pm</option>
+                                        <option value="6:30 pm">6:30 pm</option>
+                                        <option value="7:00 pm">7:00 pm</option>
+                                        <option value="7:30 pm">7:30 pm</option>
+                                        <option value="8:00 pm">8:00 pm</option>
+                                        <option value="8:30 pm">8:30 pm</option>
+                                        <option value="9:00 pm">9:00 pm</option>
+                                        <option value="9:30 pm">9:30 pm</option>
+                                        <option value="10:00 pm">10:00 pm</option>
+                                    </select>
+                                </div>
+                                <div class="mail-wrap">
+                                    <select id="country" name="country">
+                                        <option value="au">Australia</option>
+                                        <option value="ca">Canada</option>
+                                        <option value="usa">USA</option>
+                                     </select>
                                 </div>
                             </div>
                         </form>
@@ -439,6 +469,7 @@
         </div>
     </div>
     <script src="public/js/jquery.js"></script>
+    <script src="./public/js/bootstrap.min.js"></script>
     <script src="./public/js/sitescript.js"></script>
 </body>
 
