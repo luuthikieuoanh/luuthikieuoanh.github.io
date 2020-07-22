@@ -783,8 +783,9 @@ header .fixed {
 
 input[type="text"] {
     width: 100%;
-    padding: 8px 40px;
+    padding: 8px 0 8px 40px;
     margin: 8px 0;
+    cursor: text;
     border-radius: 0;
     color: #777;
     border: 1px solid #CCC;
@@ -805,10 +806,79 @@ input[type="text"] {
 
 select {
     width: 100%;
-    padding: 8px 35px;
+    height: 40px;
+    padding: 0 0 0 33px;
     margin: 8px 0;
+    cursor: pointer;
     border-radius: 0;
     color: #777;
     border: 1px solid #CCC;
     outline: none;
+}
+
+input[type="submit"] {
+    width: 100%;
+    margin: 8px 0;
+    padding: 8px 0;
+    border-radius: 0;
+    color: #fff;
+    background-color: #161d27;
+    border: 1px solid #CCC;
+    outline: none;
+}
+
+
+/* page eight */
+
+.is-text {
+    background-color: #161d27;
+    color: #bbcfcf;
+    text-align: left;
+    padding: 0 30px;
+}
+
+.is-text h3 {
+    font-family: 'Suranna', serif;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 0;
+}
+
+
+/* set footer */
+
+#footer-wrapper {
+    position: relative;
+    background-color: #0b0e13;
+    background-image: url(../img/pics/footer-bkg-img1.png), url(../img/pics/footer-bkg-img2.png);
+    background-position: left 60px, right 60px;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-top: 65px;
+}
+
+#footer-wrapper img {
+    display: inline-block;
+    max-width: 150px;
+    height: 100px;
+    margin-bottom: 30px;
+}
+
+#footer-wrapper .contact-info-list li {
+    color: #acb8c4;
+    font-size: 14px;
+    margin: 5px 0;
+    list-style: none;
+}
+
+#footer-wrapper span {
+    color: #fcda9a;
+    font-family: 'Montserrat', Arial, sans-serif;
+    line-height: 25px;
+}
+
+.social-links li {
+    text-decoration: none;
 }
