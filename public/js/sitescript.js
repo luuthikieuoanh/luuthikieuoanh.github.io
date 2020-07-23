@@ -147,3 +147,23 @@ function keydownHandler(event) {
         }
     }
 }
+
+//lấy thẻ show-scroll
+var moveTop = document.querySelector(".scroll-up");
+window.onscroll = function() {
+    scrollFunction()
+};
+// Khi người dùng kéo xuống 20px sẽ hiển thị movetop
+function scrollFunction() {
+    if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
+        moveTop.style.display = "block";
+    } else {
+        moveTop.style.display = "none";
+    }
+}
+
+//Khi người dùng nhấp vào nút, sẽ quay lại đầu trang
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
