@@ -17,62 +17,28 @@ window.addEventListener('scroll', () => {
     if (window.pageYOffset > 1) {
         navBar.classList.add('fixed');
         c.style.backgroundColor = 'rgba(0, 0, 0, 0.90)';
-        c.style.paddingTop = `${0}`;
         logo.classList.add('setlogo');
     } else {
         navBar.classList.remove('fixed');
-        logo.classList.remove('setlogo');
         c.style.backgroundColor = 'transparent';
-        c.style.paddingTop = `${20}px`;
+        logo.classList.remove('setlogo');
+
     }
-    //Chỉnh kéo theo và làm mờ nền
-    d.style.top = `${-(window.scrollY *0.30)}px`;
-    d.style.opacity = `${1 - window.scrollY*0.001}`;
 });
+//Chỉnh kéo theo và làm mờ nền
 
-function name(params) {
-    //Thay đổi độ dài của ảnh với các screen khác nhau
-    // const ax = document.querySelector('.masterslider');
+if (this.window.innerWidth > 1199) {
+    window.addEventListener('scroll', () => {
+        d.style.top = `${-(window.scrollY *0.30)}px`;
+        d.style.opacity = `${1 - window.scrollY*0.001}`;
+    })
 
-    // function changeScreen() {
-    //     ax.style.width = `${screen.width}px`
-    //         // ax.style.height = `${screen.height}px`
-    // }
-    // setInterval(changeScreen, 100);
-
-    //Bắt sự kiện di chuyển chuột mousemove
-    // function myFunction(e) {
-    //     let x = e.clientX;
-    //     let y = e.clientY;
-    //     let rs = x + "," + y;
-    //     console.log(rs);
-    // }
-
-    // let mm = document.querySelector(".ms-parallax-layer");
-
-    // mm.addEventListener('mousemove', (e) => {
-    //     mm.style.backgroundPositionX = e.pageX + "px";
-    //     mm.style.backgroundPositionY = e.pageY + "px";
-    // })
-
-    // let oanh = document.querySelectorAll('.move');
-
-    // oanh.forEach(move => {
-    //     let valueX = move.style.top;
-    //     alert(document.querySelector('.move').style.top)
-    //     let valueY = move.style.left;
-    //     console.log(valueX + "," + valueY);
-    //     $(document).ready(function() {
-    //         $(document).mousemove(function(event) {
-    //             $(move).css({ 'top': event.pageX, 'left': event.pageY })
-    //         });
-    //     });
-    // });
-
-    // let valueX = document.querySelector('.move1').style.top;
-    // alert(document.querySelector('.move').style.top)
-    // let valueY = document.querySelector('.move').style.left;
 }
+
+
+
+
+
 //Chỉnh chuyển động củ hành
 $(document).ready(function() {
     $(document).mousemove(function(event) {
@@ -168,23 +134,23 @@ function topFunction() {
     document.documentElement.scrollTop = 0;
 }
 //Carousel
-// $(document).ready(function() {
-//     $('.owl-carousel').owlCarousel({
-//         autoplay: true,
-//         autoplayTimeout: 5000,
-//         loop: true,
-//         margin: 10,
-//         nav: true,
-//         responsive: {
-//             0: {
-//                 items: 1
-//             },
-//             600: {
-//                 items: 1
-//             },
-//             1000: {
-//                 items: 1
-//             }
-//         }
-//     });
-// })
+$(document).ready(function() {
+    $('.owl-carousel').owlCarousel({
+        autoplay: true,
+        autoplayTimeout: 5000,
+        dots: true,
+        loop: true,
+        margin: 10,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 1
+            }
+        }
+    });
+})
